@@ -2,13 +2,13 @@ from .student import Student
 
 # add MiddleSchoolStudent here
 class MiddleSchoolStudent(Student):
-    def __init__(self, name, grade, classes, get_transportation=False):
+    def __init__(self, name, grade, classes, gets_transportation=False):
         
         super().__init__(name, grade, classes)
-        self.get_transportation = get_transportation
+        self.gets_transportation = gets_transportation
 
     def display_transportation_message(self):
-        has_message = "has" if self.get_transportation else "doesn't have"
+        has_message = "has" if self.gets_transportation else "doesn't have"
         return f"{self.name} {has_message} transportation"
     
     def summary(self):
